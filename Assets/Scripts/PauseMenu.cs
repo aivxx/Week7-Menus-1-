@@ -39,8 +39,8 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(true);
     }
 
-    public void LoadGameMenu()
+    public void SceneLoad(string sceneName)
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(sceneName);
     }
 }
