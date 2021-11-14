@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class ChestBehavior : MonoBehaviour
 {
+    //ref to player animator
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = gameObject.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    // OnTriggerEnter is called when the Collider other enters the trigger
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            anim.SetBool("isOpen", true);
+        }
     }
+
+    // OnTriggerExit is called when the Collider other has stopped touching the trigger
+    private void OnTriggerExit(Collider other)
+    {
+
+        if (other.CompareTag("Player"))
+        {
+            anim.SetBool("isOpen", false);
+        }
+    }
+
+
 }
