@@ -11,3 +11,8 @@ and EventSystem object. Imported into FirstPerson and Isometric scenes.
 Chest Animator
 -- Created parameters in animator for chest open/close
 -- Created Chest Behavior script for trigger of treasure chest
+
+Animations
+-- Created copy of chest open animator, recreated chest opening on X axis at 150 degrees over 60 frames/1sec.
+-- Added to ChestBehavior script to log when chest has opened - good code for adding sound upon a trigger
+-- Created firefly animations. Each firefly has a animation on it's pointlight to pulsate at different times and intensities. 
